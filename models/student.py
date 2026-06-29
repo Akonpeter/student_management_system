@@ -124,6 +124,25 @@ def add_student():
 
         for student in students:
             student.display_info()
+
+
+
+         # Search for Student
+
+    def search_students():
+        students = load_students()
+
+        student_id = input("\nEnter Student ID: ").strip()
+
+        for student in students:
+            if student.student_id == student_id:
+                student.display_info()
+                return
+
+            print("Student not found.")
+                 
+    
             
+
 
 
