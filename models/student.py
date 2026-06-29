@@ -140,7 +140,65 @@ def add_student():
                 return
 
             print("Student not found.")
-                 
+
+
+
+            # Update Student
+
+    def update_student():
+        students = load_students()
+
+        students_id = input("\nEnter Student ID:").strip()
+
+        for student in students:
+            if student.student_id == student_id:
+                print("\nEnter New Details")
+
+                full_name = input("Full Name: ")
+                email = input("Email: ")
+                phone = input("Phone: ")
+                programme = ("Programme: ")
+
+                student.update_info(
+                    full_name,
+                    email,
+                    phone,
+                    programme
+                )   
+
+                save_students(students)
+
+                print("Student updated successfully.")
+                return
+
+            print("Student not found.") 
+
+
+
+
+
+
+ #        Delete Student  
+  
+             
+    def delete_student():
+        students = load_students()
+
+        student_id = input("\nEnter Student ID: ").strip()
+
+        for student in students:
+            if student.student_id == student_id:
+                students.remove(student)
+                save_student(students)
+
+                print("Student deleted successfully. ")
+                return
+            
+            print("Student not found.")
+
+
+            
+
     
             
 
