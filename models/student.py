@@ -109,3 +109,21 @@ def add_student():
     print("\nStudent added successfully")
 
 
+
+
+    # View Students 
+
+    def view_students():
+        students = load_students()
+
+        if not students:
+            print("\nNo students found.")
+            return
+        
+        print("\n=== Student List ===")
+
+        for student in students:
+            student.display_info()
+            
+
+
