@@ -69,4 +69,43 @@ class Student:
        data = [student.to_dict() for student in students]
     save_data(STUDENT_FILE, data)
 
+
+
+
     # Add student data
+def add_student():
+    students = load_students()
+
+
+    print("\n=== Add Student ===")
+
+    student_id = input("Student ID: ").strip()
+
+    for student in students:
+        if student.student_id == student_id:
+            print("Student ID already exists.")
+            return
+
+    full_name = input("Full Name: ")
+    email = input("Email: ")
+    phone = input("Phone: ")
+    programme = input("Programme: ")
+    registration_date = input("Registration Date (YYYY-MM-DD): ")
+
+
+    new_student = Student(
+        student_id,
+        full_name,
+        email,
+        phone,
+        programme,
+        registration_date
+    ) 
+
+    students.append(new_student)
+    save_students(students)
+
+
+    print("\nStudent added successfully")
+
+
