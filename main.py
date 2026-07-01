@@ -1,6 +1,7 @@
 from auth import login, logout
 from students import student_menu
 from assignments import assignment_menu
+from grades import grade_menu
 
 
 def display_main_menu():
@@ -35,8 +36,9 @@ def main():
 
         elif choice == "2":
          assignment_menu()
+
         elif choice == "3":
-            print("\nGrade Management Module (Coming Soon...)")
+          grade_menu()
 
         elif choice == "4":
             print("\nAnnouncement Module (Coming Soon...)")
