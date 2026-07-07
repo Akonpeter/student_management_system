@@ -3,6 +3,7 @@ from students import student_menu
 from assignments import assignment_menu
 from grades import grade_menu
 from announcements import announcement_menu
+from reports import reports_menu
 
 
 def display_main_menu():
@@ -45,7 +46,7 @@ def main():
            announcement_menu()
 
         elif choice == "5":
-            print("\nReports Module (Coming Soon...)")
+          reports_menu()
 
         elif choice == "6":
             logout()
